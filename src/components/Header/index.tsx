@@ -20,7 +20,7 @@ const Header = () => {
         </ul>
         <ul className="flex gap-2 font-semibold font-sans">
           <li className="py-2 px-6 rounded-3xl  transition duration-200 cursor-pointer hover:bg-gray-500 hover:text-gray-100">
-            <Link to="/login" className="p-2">Log In</Link>
+            <Link to="/signin" className="p-2">Sign In</Link>
           </li>
           <li className="py-2 px-6 rounded-3xl transition duration-200 bg-green-500 text-gray-100 cursor-pointer hover:bg-gray-100 hover:text-green-500">
             <Link to="/signup" className="p-2">Sign Up</Link>
