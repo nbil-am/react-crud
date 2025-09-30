@@ -60,7 +60,7 @@ const SignUp = () => {
             <button
               type="submit"
               className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-200">
-              Log In
+              Sign Up
             </button>
           </form>
           <p className="text-white text-center flex gap-2 mt-4 justify-center">
