@@ -5,17 +5,20 @@ import MainLayout from "./layout/MainLayout";
 import NotFound from "./NotFound";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
+import Auth from "./components/middleware/Auth";
 
 function App() {
   return (
     <>
       <Routes>
         {/* Main Layout */}
-        <Route element={<MainLayout />} >
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
         </Route>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route element={<Auth guest redirect="/" />}>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

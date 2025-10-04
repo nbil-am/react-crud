@@ -38,6 +38,8 @@ const Login = () => {
       throw new Error(data.message || "Failed to log in");
     }
     console.log("Login successful:", data);
+    localStorage.setItem("token", data.token);
+    window.location.reload();
     return data;
   } catch (error) {
     setErrorMessage(error instanceof Error ? error.message : String(error));
@@ -48,7 +50,7 @@ const Login = () => {
 
   return (
     // Image Background
-    <div className="flex overflow-hidden justify-center items-center h-screen bg-[url('/ina2.jpg')] bg-cover">
+    <div className="flex overflow-hidden bg-center justify-center items-center h-screen bg-[url('/ina2.jpg')] bg-cover">
       {/* Blur Container */}
       <div className="w-screen mx-auto flex items-center justify-around">
         {/* Left Side Wrapper */}
