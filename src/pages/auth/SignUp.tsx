@@ -41,7 +41,6 @@ const SignUp = () => {
       }
       const responseData = await response.json();
       console.log("Sign up successful:", responseData);
-      localStorage.setItem("token", responseData.token);
       window.location.reload();
 
       return responseData;

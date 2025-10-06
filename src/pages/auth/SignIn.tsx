@@ -38,7 +38,6 @@ const Login = () => {
       throw new Error(data.message || "Failed to log in");
     }
     console.log("Login successful:", data);
-    localStorage.setItem("token", data.token);
     window.location.reload();
     return data;
   } catch (error) {
